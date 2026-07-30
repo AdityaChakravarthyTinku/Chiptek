@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  @apply bg-surface-white text-ink-text font-body antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @apply font-head tracking-tight;
+}
+
+.skip-link {
+  @apply sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100]
+    focus:bg-ink focus:text-white focus:px-4 focus:py-2 focus:rounded-md focus:outline-none
+    focus:ring-2 focus:ring-teal;
+}
+
+.container-content {
+  @apply mx-auto max-w-content px-5 sm:px-8 lg:px-10;
+}
+
+.section-padding {
+  @apply py-16 sm:py-20 lg:py-28;
+}
+
+.body-copy {
+  @apply text-slate-body leading-relaxed;
+}
+
+/* Focus visibility kept intentionally strong across the site */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #079a7a;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Subtle data-grid texture used behind hero content */
+.grid-texture {
+  background-image:
+    linear-gradient(rgba(217, 226, 238, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(217, 226, 238, 0.08) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

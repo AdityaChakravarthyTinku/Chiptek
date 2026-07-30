@@ -1,0 +1,30 @@
+# Chiptek — Apache / cPanel SPA rewrite rules
+# Serves index.html for any route that isn't a real file, so React Router
+# can handle client-side routing on direct loads and refreshes.
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # If the request is for an actual file or directory, serve it directly
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Otherwise, hand off to the SPA entry point
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# Cache static assets, leave index.html revalidating
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType video/mp4 "access plus 1 month"
+</IfModule>
+
+# Force HTTPS (enable once a certificate is installed)
+# RewriteCond %{HTTPS} off
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
