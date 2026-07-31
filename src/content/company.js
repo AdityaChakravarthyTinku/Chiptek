@@ -7,7 +7,7 @@ const email = import.meta.env.VITE_COMPANY_EMAIL || "Hr@chiptekus.com";
 const contractsEmail = import.meta.env.VITE_CONTRACTS_EMAIL || "Contracts@chiptekus.com";
 const linkedInUrl = import.meta.env.VITE_LINKEDIN_URL || "";
 const siteUrl = import.meta.env.VITE_SITE_URL || "";
-const addressVisibility = import.meta.env.VITE_ADDRESS_VISIBILITY || "city-only"; // "full" | "city-only" | "hidden"
+const addressVisibility = import.meta.env.VITE_ADDRESS_VISIBILITY || "full"; // "full" | "city-only" | "hidden"
 const showMapLink = import.meta.env.VITE_SHOW_MAP_LINK === "true"; // default false
 const contactFormEndpoint = import.meta.env.VITE_CONTACT_FORM_ENDPOINT || "";
 
