@@ -105,6 +105,11 @@ export default function Contact() {
                 <Mail size={16} className="text-teal" aria-hidden="true" /> {company.email.display}
               </a>
             )}
+            {company.contractsEmail.display && (
+              <a href={company.contractsEmail.href} className="flex items-center gap-2 text-sm text-ink-text hover:text-teal">
+                <Mail size={16} className="text-teal" aria-hidden="true" /> Contracts: {company.contractsEmail.display}
+              </a>
+            )}
             {location && (
               <p className="flex items-center gap-2 text-sm text-ink-text">
                 <MapPin size={16} className="text-teal" aria-hidden="true" /> {location}

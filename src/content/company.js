@@ -3,7 +3,8 @@
 // rather than hard-coding it, so there is exactly one place to update before
 // launch. Lines marked REVIEW BEFORE LAUNCH must be checked/replaced.
 
-const email = import.meta.env.VITE_COMPANY_EMAIL || "";
+const email = import.meta.env.VITE_COMPANY_EMAIL || "Hr@chiptekus.com";
+const contractsEmail = import.meta.env.VITE_CONTRACTS_EMAIL || "Contracts@chiptekus.com";
 const linkedInUrl = import.meta.env.VITE_LINKEDIN_URL || "";
 const siteUrl = import.meta.env.VITE_SITE_URL || "";
 const addressVisibility = import.meta.env.VITE_ADDRESS_VISIBILITY || "city-only"; // "full" | "city-only" | "hidden"
@@ -36,6 +37,13 @@ export const company = {
     // when this is empty.
     display: email,
     href: email ? `mailto:${email}` : ""
+  },
+  contractsEmail: {
+    // REVIEW BEFORE LAUNCH: no real email address has been supplied yet.
+    // Leave blank rather than fabricating one — the UI hides email affordances
+    // when this is empty.
+    display: contractsEmail,
+    href: contractsEmail ? `mailto:${contractsEmail}` : ""
   },
 
   address: {

@@ -78,6 +78,13 @@ export default function Footer() {
                 </a>
               </li>
             )}
+            {company.email.display && (
+              <li>
+                <a href={company.contractsEmail.href} className="inline-flex items-center gap-2 hover:text-white">
+                  <Mail size={15} aria-hidden="true" /> {company.contractsEmail.display}
+                </a>
+              </li>
+            )}
             {location && (
               <li className="inline-flex items-start gap-2">
                 <MapPin size={15} className="mt-0.5 shrink-0" aria-hidden="true" /> {location}
