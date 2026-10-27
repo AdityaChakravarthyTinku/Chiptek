@@ -100,6 +100,9 @@ export default function Contact() {
             <a href={company.phone.href} className="flex items-center gap-2 text-sm text-ink-text hover:text-teal">
               <Phone size={16} className="text-teal" aria-hidden="true" /> {company.phone.display}
             </a>
+             <a href={company.phone2.href} className="flex items-center gap-2 text-sm text-ink-text hover:text-teal">
+              <Phone size={16} className="text-teal" aria-hidden="true" /> {company.phone2.display}
+            </a>
             {company.email.display && (
               <a href={company.email.href} className="flex items-center gap-2 text-sm text-ink-text hover:text-teal">
                 <Mail size={16} className="text-teal" aria-hidden="true" /> {company.email.display}
