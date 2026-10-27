@@ -70,6 +70,9 @@ export default function Footer() {
               <a href={company.phone.href} className="inline-flex items-center gap-2 hover:text-white">
                 <Phone size={15} aria-hidden="true" /> {company.phone.display}
               </a>
+              <a href={company.phone2.href} className="inline-flex items-center gap-2 hover:text-white">
+                <Phone size={15} aria-hidden="true" /> {company.phone2.display}
+              </a>
             </li>
             {company.email.display && (
               <li>
