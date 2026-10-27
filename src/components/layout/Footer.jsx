@@ -71,6 +71,8 @@ export default function Footer() {
                 <Phone size={15} aria-hidden="true" /> {company.phone.display}
               </a>
             </li>
+             <ul className="mt-4 space-y-3 text-sm text-white/65">
+            <li>Secondary Contact: {company.secondaryContact.fullName}</li>
             <li>
               <a href={company.phone2.href} className="inline-flex items-center gap-2 hover:text-white">
                 <Phone size={15} aria-hidden="true" /> {company.phone2.display}
