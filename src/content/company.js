@@ -30,6 +30,10 @@ export const company = {
     display: "+1 (530) 608-2736",
     href: "tel:+15306082736"
   },
+  phone2: {
+    display: "+1 (512) 515-3171",
+    href: "tel:+15125153171"
+  },
 
   email: {
     // REVIEW BEFORE LAUNCH: no real email address has been supplied yet.
