@@ -97,6 +97,10 @@ export default function Contact() {
               <span className="font-semibold">Primary Contact:</span> {company.primaryContact.fullName}
               {company.primaryContact.role && ` — ${company.primaryContact.role}`}
             </p>
+              <p className="text-sm text-ink-text">
+              <span className="font-semibold">Secondary Contact:</span> {company.secondaryContact.fullName}
+              {company.secondaryContact.role && ` — ${company.secondaryContact.role}`}
+            </p>
             <a href={company.phone.href} className="flex items-center gap-2 text-sm text-ink-text hover:text-teal">
               <Phone size={16} className="text-teal" aria-hidden="true" /> {company.phone.display}
             </a>
