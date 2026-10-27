@@ -25,6 +25,14 @@ export const company = {
     // (founder/CEO/director/etc). Leave blank until a real role is provided.
     role: ""
   },
+    secondaryContact: {
+    firstName: "Sandhya",
+    lastName: "Krishna",
+    fullName: "Sandhya Krishna",
+    // REVIEW BEFORE LAUNCH: no title has been supplied. Do not invent one
+    // (founder/CEO/director/etc). Leave blank until a real role is provided.
+    role: ""
+  },
 
   phone: {
     display: "+1 (530) 608-2736",
